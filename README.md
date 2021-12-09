@@ -1,5 +1,5 @@
-#Análisis de medidas del COVID-19
-##```Contenidos:```
+## Análisis de medidas del COVID-19
+```Contenidos:```
   - Descripcion del problema
   - ¿Por qué necesitamos Big Data?
   - Descripción de la solución 
