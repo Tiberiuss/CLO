@@ -39,8 +39,6 @@ Todos los datasets usados los hemos obtenido [aqui](https://github.com/GoogleClo
 En la siguiente imagen vemos un ejemplo de Government Response (medidas tomadas por el gobierno)
 
 ## Descripción técnica del modelo
-## Links
-## Descripción técnica del software usado
 ### Pyspark
 En cuanto a sofware nuestra principal herramienta ha sido pyspark, con este hemos podido transformar los datasets mencionados anteriormente (en formato csv) en informacion útil para llegar a una solución al problema planteado (usando principalmente la funcion de filtrado y de union de diferentes datasets). 
 
@@ -49,6 +47,16 @@ Estas dos librerias de python nos han permitido transformar la información que 
 
 ### Google Cloud
 Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que tardaba con lo que nos tardaba de forma local. De esta manera, aunque no estuvieramos trabajando con un volumen de datos tan grande se podría ver la mejora de rendimiento que nos proporciona esta herramienta.
+## Links
+  - [Scripts]()
+  - [Graficos]()
+  - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
+## Descripción técnica del software usado (como ejecutarlo)
+### Requisitos necesarios para ejecutar el software
+Para ejecutar el software es necesarios tener instalado python con las librerias de pandas y matplotlib, pyspark y shell basado en unix.
+### Como ejecutarlo (de manera local)
+En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que spark ejecute el script y una vez vaya finalizando cada trabajo se nos abrirá otra pestaña que mostrará el gráfico obtenido (este grafico se puede descargar y una vez se haya hecho habrá que cerrar esta pestaña para que siga ejecutando el script).
+### Como ejecutarlo (en Google Cloud)
 
 ## Rendimiento de la aplicación
 ## Conclusión
