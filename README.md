@@ -37,7 +37,7 @@ Todos los datasets usados los hemos obtenido [aqui](https://github.com/GoogleClo
 - Government Response
 
 En la siguiente imagen vemos un ejemplo de Government Response (medidas tomadas por el gobierno)
-[![Ejemplo de columnas de Government Response (Medidas tomadas)](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/EjemploDS.JPG)]
+![Ejemplo de columnas de Government Response (Medidas tomadas)](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/EjemploDS.JPG?token=AU4GPUPZ4C7NANPW6QGHFE3BX5V7G)
 
 ## Descripción técnica del modelo
 ### Pyspark
