@@ -53,12 +53,13 @@ Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que
   - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
 ## Descripción técnica del software usado (como ejecutarlo)
 ### Requisitos necesarios para ejecutar el software
-Para ejecutar el software es necesarios tener instalado python con las librerias de pandas y matplotlib, pyspark y shell basado en unix.
+Para ejecutar el software es necesario tener instalado python con las librerias de pandas y matplotlib, pyspark y un shell basado en unix.
 ### Como ejecutarlo (de manera local)
 En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que spark ejecute el script y una vez vaya finalizando cada trabajo se nos abrirá otra pestaña que mostrará el gráfico obtenido (este grafico se puede descargar y una vez se haya hecho habrá que cerrar esta pestaña para que siga ejecutando el script).
 ### Como ejecutarlo (en Google Cloud)
 
 ## Rendimiento de la aplicación
+
 ## Conclusión
 Las conclusiones que hemos obtenido varían dependiendo del script que se haya ejecutado por lo tanto se verá una conclusion por cada uno de los scripts y una conclusión que pueda englobar todos estos datos.
 ### Conclusiones indicesPorPaises.py
