@@ -14,7 +14,7 @@ spark=SparkSession.builder.appName('Consulta1').getOrCreate()
 urlfile1="https://storage.googleapis.com/covid19-open-data/v3/oxford-government-response.csv"
 
 spark.sparkContext.addFile(urlfile1)
-paisesLista = ['ES', 'BR', 'AU', 'ZA', 'IN']
+paisesLista = ['ES', 'BR', 'FR', 'AR', 'CH']
 df = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("oxford-government-response.csv")).filter(col("stringency_index") != 0)
 df_spark = df.filter(df.location_key.isin(paisesLista))
 #Media mundial stringency_index
@@ -46,6 +46,7 @@ mediaTiempo = mediaDIAS.first()["avg(count)"]
 
 df_panda.plot.bar(x = "location_key", y = ["avg(stringency_index)", "weeks"])
 
-plt.axhline(mediaTiempo / 7, linestyle='dashed', linewidth=1)
-plt.axhline(mediaIndex, linestyle='dashed', linewidth=1)
-plt.savefig("graficos/indicePorPaises.jpeg")
+plt.axhline(mediaTiempo / 7, linestyle='dashed', linewidth=1, color = "orange", label = "world_avg(weeks)")
+plt.axhline(mediaIndex, linestyle='dashed', linewidth=1, label = "world_avg(stringency_index)")
+plt.legend(loc="upper center", bbox_to_anchor=(0.5, 1.15), ncol=2)
+plt.show()
