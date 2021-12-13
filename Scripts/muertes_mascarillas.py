@@ -1,6 +1,4 @@
 import pandas as pd
-#import plotly.graph_objs as go
-#import plotly.express as px
 import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 
@@ -9,7 +7,12 @@ from pyspark.sql.functions import to_date, col, xxhash64, year,month,date_format
 from pyspark.sql import SparkSession
 from pyspark import SparkFiles
 
-paisesLista = ['ES', 'BR', 'AU', 'ZA', 'IN']
+'''
+Este script compara las muertes y hospitalizaciones por covid y el uso de mascarillas para una lista de paises
+'''
+
+
+paisesLista = ['ES', 'BR', 'FR', 'AR', 'CH']
 
 spark = SparkSession.builder.appName('A').getOrCreate()
 
@@ -39,11 +42,12 @@ for x in paisesLista:
     dfJOIN = dfJOIN.join(df_spark_hospitalizations, 'date').orderBy(col("date").asc())
 
     proporcion = 1000000 / poblacion
-    dfJOIN = dfJOIN.withColumn("new_deceased", col("new_deceased") * proporcion).withColumnRenamed("new_deceased", "new_deceased_1000000")
+    dfJOIN = dfJOIN.withColumn("new_deceased", col("new_deceased") * proporcion).withColumnRenamed("new_deceased", "new_deceased/1000000")
     dfJOIN = dfJOIN.withColumn("facial_coverings", col("facial_coverings") * 25).withColumnRenamed("facial_coverings", "facial_coverings_percentage")
-    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients_100000")
+    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients/1000000")
 
     dfJOIN.show()
     df_panda = dfJOIN.toPandas()
-    df_panda.plot(x ='date', y=["facial_coverings_percentage", "new_deceased_1000000", "new_hospitalized_patients_100000"], kind = 'line')
-    plt.savefig("graficos/muertes_mascarillas" + x + ".jpeg")
+    df_panda.plot(x ='date', y=["facial_coverings_percentage", "new_deceased/1000000", "new_hospitalized_patients/1000000"], kind = 'line')
+    plt.legend(loc="upper center", bbox_to_anchor=(0.5, 1.15), ncol=3)
+    plt.show()

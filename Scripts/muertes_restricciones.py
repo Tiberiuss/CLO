@@ -1,6 +1,4 @@
 import pandas as pd
-#import plotly.graph_objs as go
-#import plotly.express as px
 import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 
@@ -9,7 +7,12 @@ from pyspark.sql.functions import to_date, col, xxhash64, year,month,date_format
 from pyspark.sql import SparkSession
 from pyspark import SparkFiles
 
-paisesLista = ['ES', 'BR', 'AU', 'ZA', 'IN']
+
+'''
+Este script compara las muertes y hospitalizaciones por covid y el stringency index para una lista de paises
+'''
+
+paisesLista = ['ES', 'BR', 'FR', 'AR', 'CH']
 
 spark = SparkSession.builder.appName('A').getOrCreate()
 
@@ -40,10 +43,11 @@ for x in paisesLista:
 
     proporcion = 1000000 / poblacion
     
-    dfJOIN = dfJOIN.withColumn("new_deceased", col("new_deceased") * proporcion).withColumnRenamed("new_deceased", "new_deceased_1000000")
-    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients_100000")
+    dfJOIN = dfJOIN.withColumn("new_deceased", col("new_deceased") * proporcion).withColumnRenamed("new_deceased", "new_deceased/1000000")
+    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients/1000000")
 
     dfJOIN.show()
     df_panda = dfJOIN.toPandas()
-    df_panda.plot(x ='date', y=["stringency_index", "new_deceased_1000000", "new_hospitalized_patients_100000"], kind = 'line')
-    plt.savefig("graficos/muertes_restricciones" + x + ".jpeg")
+    df_panda.plot(x ='date', y=["stringency_index", "new_deceased/1000000", "new_hospitalized_patients/1000000"], kind = 'line')
+    plt.legend(loc="upper center", bbox_to_anchor=(0.5, 1.15), ncol=3)
+    plt.show()
