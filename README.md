@@ -39,7 +39,6 @@ Todos los datasets usados los hemos obtenido [aqui](https://github.com/GoogleClo
 En la siguiente imagen vemos un ejemplo de Government Response (medidas tomadas por el gobierno):
 
 ![Ejemplo de columnas de Government Response (Medidas tomadas)](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/EjemploDS.JPG?token=AU4GPUPZ4C7NANPW6QGHFE3BX5V7G)
-
 ## Descripción técnica del modelo
 ### Pyspark
 En cuanto a sofware nuestra principal herramienta ha sido pyspark, con este hemos podido transformar los datasets mencionados anteriormente (en formato csv) en informacion útil para llegar a una solución al problema planteado (usando principalmente la funcion de filtrado y de union de diferentes datasets). 
