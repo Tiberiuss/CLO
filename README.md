@@ -71,19 +71,25 @@ En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que s
 Las conclusiones que hemos obtenido varían dependiendo del script que se haya ejecutado por lo tanto se verá una conclusion por cada uno de los scripts y una conclusión que pueda englobar todos estos datos. En cada apartado se mostrará un ejemplo de los gráficos que se han obtenido con cada script, para verlos todos pinche [aqui](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
 ### Conclusiones indicesPorPaises.py
 Los paises que hemos seleccionado se encuentran cerca de la media mundial de exigencia de las medidas sanitarias (China está algo por debajo y Argentina un poco por encima) y de la media mundial del total de semanas con restricciones. Esto nos sirve para poder comparar paises con una exigencia parecida y ver que medidas ha tomado cada uno de los países.
+
 ![Ejemplo de indicesPorPaises.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoIndicePorPaises.png?token=AU4GPUJOKX7V26SV6UVKG2TBYBOOG)
 ### Conclusiones economia.py
 En el grafico se puede ver como de los países seleccionados, los que tienen mayor pib per capita tienen un menor numero de fallecimientos por cada 10000000 habitantes. Por tanto hemos llegado a la conclusión que la riqueza del país es un factor importante a la hora de hacer frente a la pandemia del COVID-19. En la siguiente imagen se muestra el grafico de muertes respecto a la economia en una lista de paises:
+
 ![Ejemplo de economia.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoEconomiapng.png?token=AU4GPUKMVYFPA4S377VZUXDBYBOK6)
 ### Conclusiones muertes_Restricciones.py
 Este es un grafico general en el que se puede apreciar como el aumento en la exigencia de medidas sanitarias reduce los fallecidos y las hospitalizaciones. Sabiendo que las medidas sanitarias son algo necesario para la pandemia hemos analizado algunas medidas especificas para ver si estas son necesarias o no. En la siguiente imagen se muestra el grafico de restricciones en una lista de paises:
+
 ![Ejemplo de muertes_Restricciones.py en CH](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesRestriccionesCH.png?token=AU4GPULOPDZ53BPZ2W25VSTBYBO52)
 ### Conclusiones muertes_cierreColegios.py
 En los paises que hemos estudiado siempre que se hace menos estricta la medida del cierre de colegios hay un pico de hospitalizaciones y muertes en las siguientes fechas, es por esto que podemos concluir que la medida del cierre de colegios en importante para el control de la pandemia. En la siguiente imagen vemos un ejemplo de estos gráficos en Argentina:
+
 ![Ejemplo de muertes_cierreColegios.py en AR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCierreColegiosAR.png?token=AU4GPUIBDN7PQGCBZTAOCU3BYBORW)
 ### Conclusiones muertes_mascarillas.py
 En todos los paises estudiados las mascarillas han estado vigentes en un nivel de exigencia de 3 o 4 la mayoria del tiempo, es por esto que con nuestro estudio no podemos sacar conclusiones acerca de su efectividad, más allá de la recomendacion de usarlas por parte de la OMS. En la siguiente imagen se muestra un grafico de ejemplo de las muertes y hospitalizaciones y la exigencia del uso de mascarillas en España:
+
 ![Ejemplo de muertes_mascarillas.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesMascarillasES.png?token=AU4GPUNMKEYHP5NMLURBYYDBYBO3O)
 ### Conclusiones muertes_cuarentena.py
-En los paises que hemos estudiado parece que cuando se sube la exigencia de la cuarentena disminuyen las muertes y hospitalizaciones, en la mayoria de paises han intentado ir disminuyendo esta medida debido a que en su mayor nivel de exigencia requiere parar un pais por completo, pero cada vez que aumentaban los casos volvian a tomar una mayor exigencia en esta medida. China, sin embargo, ha mantenido un nivel de exigencia 1. En la siguiente imagen se muestra un ejemplo de este grafico en Brasil
+En los paises que hemos estudiado parece que cuando se sube la exigencia de la cuarentena disminuyen las muertes y hospitalizaciones, en la mayoria de paises han intentado ir disminuyendo esta medida debido a que en su mayor nivel de exigencia requiere parar un pais por completo, pero cada vez que aumentaban los casos volvian a tomar una mayor exigencia en esta medida. China, sin embargo, ha mantenido un nivel de exigencia 1. En la siguiente imagen se muestra un ejemplo de este grafico en Brasil:
+
 ![Ejemplo de muertes_cuarentena.py en BR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaBR.png?token=AU4GPULWJ3YMLACJCB5B2DLBYBOYS)
