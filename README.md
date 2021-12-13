@@ -63,10 +63,16 @@ En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que s
 ## Rendimiento de la aplicación
 
 ## Conclusión
-Las conclusiones que hemos obtenido varían dependiendo del script que se haya ejecutado por lo tanto se verá una conclusion por cada uno de los scripts y una conclusión que pueda englobar todos estos datos.
+Las conclusiones que hemos obtenido varían dependiendo del script que se haya ejecutado por lo tanto se verá una conclusion por cada uno de los scripts y una conclusión que pueda englobar todos estos datos. En cada apartado se mostrará un ejemplo de los gráficos que se han obtenido con cada script, para verlos todos pinche [aqui](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
 ### Conclusiones indicesPorPaises.py
+![Ejemplo de indicesPorPaises.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoIndicePorPaises.png?token=AU4GPUJOKX7V26SV6UVKG2TBYBOOG)
 ### Conclusiones economia.py
+![Ejemplo de economia.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoEconomiapng.png?token=AU4GPUKMVYFPA4S377VZUXDBYBOK6)
 ### Conclusiones muertes_Restricciones.py
+![Ejemplo de muertes_Restricciones.py en CH](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesRestriccionesCH.png?token=AU4GPULOPDZ53BPZ2W25VSTBYBO52)
 ### Conclusiones muertes_cierreColegios.py
+![Ejemplo de muertes_cierreColegios.py en AR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCierreColegiosAR.png?token=AU4GPUIBDN7PQGCBZTAOCU3BYBORW)
 ### Conclusiones muertes_mascarillas.py
+![Ejemplo de muertes_mascarillas.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesMascarillasES.png?token=AU4GPUNMKEYHP5NMLURBYYDBYBO3O)
 ### Conclusiones muertes_cuarentena.py
+![Ejemplo de muertes_cuarentena.py en BR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaBR.png?token=AU4GPULWJ3YMLACJCB5B2DLBYBOYS)
