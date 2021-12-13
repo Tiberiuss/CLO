@@ -83,12 +83,12 @@ Este es un grafico general en el que se puede apreciar como el aumento en la exi
 ### Conclusiones muertes_cierreColegios.py
 En los paises que hemos estudiado siempre que se hace menos estricta la medida del cierre de colegios hay un pico de hospitalizaciones y muertes en las siguientes fechas, es por esto que podemos concluir que la medida del cierre de colegios en importante para el control de la pandemia. En la siguiente imagen vemos un ejemplo de estos gráficos en Argentina:
 
-![Ejemplo de muertes_cierreColegios.py en AR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCierreColegiosAR.png?token=AU4GPUIBDN7PQGCBZTAOCU3BYBORW)
+![Ejemplo de muertes_cierreColegios.py en FR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCierreColegiosFR.png?token=AU4GPUNSJI35GBEULE4AQX3BYDFBC)
 ### Conclusiones muertes_mascarillas.py
 En todos los paises estudiados las mascarillas han estado vigentes en un nivel de exigencia de 3 o 4 la mayoria del tiempo, es por esto que con nuestro estudio no podemos sacar conclusiones acerca de su efectividad, más allá de la recomendacion de usarlas por parte de la OMS. En la siguiente imagen se muestra un grafico de ejemplo de las muertes y hospitalizaciones y la exigencia del uso de mascarillas en España:
 
-![Ejemplo de muertes_mascarillas.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesMascarillasES.png?token=AU4GPUNMKEYHP5NMLURBYYDBYBO3O)
+![Ejemplo de muertes_mascarillas.py en BR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesMascarillasBR.png?token=AU4GPUKF5VBGBTHL5JYSIRDBYDFSGYDBYBO3O)
 ### Conclusiones muertes_cuarentena.py
 En los paises que hemos estudiado parece que cuando se sube la exigencia de la cuarentena disminuyen las muertes y hospitalizaciones, en la mayoria de paises han intentado ir disminuyendo esta medida debido a que en su mayor nivel de exigencia requiere parar un pais por completo, pero cada vez que aumentaban los casos volvian a tomar una mayor exigencia en esta medida. China, sin embargo, ha mantenido un nivel de exigencia 1. En la siguiente imagen se muestra un ejemplo de este grafico en Brasil:
 
-![Ejemplo de muertes_cuarentena.py en BR](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaBR.png?token=AU4GPULWJ3YMLACJCB5B2DLBYBOYS)
+![Ejemplo de muertes_cuarentena.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaES.png?token=AU4GPUOUT7YWPRCY63UC5ZLBYDFZW)
