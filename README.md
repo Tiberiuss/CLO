@@ -49,8 +49,8 @@ Estas dos librerias de python nos han permitido transformar la información que 
 ### Google Cloud
 Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que tardaba con lo que nos tardaba de forma local. De esta manera, aunque no estuvieramos trabajando con un volumen de datos tan grande se podría ver la mejora de rendimiento que nos proporciona esta herramienta.
 ## Links
-  - [Scripts]()
-  - [Graficos]()
+  - [Scripts](https://github.com/Tiberiuss/CLO/tree/main/Scripts)
+  - [Graficos](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
   - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
 ## Descripción técnica del software usado (como ejecutarlo)
 ### Requisitos necesarios para ejecutar el software
