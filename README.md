@@ -9,8 +9,9 @@
   5. [Modelos de programación, plataformas e infraestructura](#5-descripcion-tecnica-del-modelo)
   6. [Explicación del código y como usarlo](#6-explicación-del-código-y-como-usarlo)
   7. [Evaluación del rendimiento](#7-evaluación-del-rendimiento)
-  8. [Dificultades y optimizaciones](#8-dificultades-y-optimizaciones)
-  9. [Logros y próximos objetivos](#9-logros-y-próximos-objetivos)
+  8. [Conclusiones] (#8-conclusion)
+  9. [Dificultades y optimizaciones](#9-dificultades-y-optimizaciones)
+  10. [Logros y próximos objetivos](#10-logros-y-próximos-objetivos)
 
 ## 1. Descripción del problema
 Los casos de COVID-19 van en aumento y los expertos empiezan a hablar de que esto se podría convertir en una sexta ola. Es por esto que nuestro proyecto se centrará en el análisis de las distintas medidas sanitarias que han tomado los países (como por ejemplo el uso de mascarillas o el cierre de colegios), de tal manera que podamos ver su efectividad y prepararnos para próximas olas.
@@ -65,7 +66,7 @@ En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que s
 Hemos hecho varias pruebas en local y en el cloud con uno de los scripts que requiere mas procesado (muertes_cierre_Colegios.py):
 
 ![Comparacion rendimiento](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/rendimiento.png)
-## Conclusión
+## 8. Conclusión
 ### Datos importantes a tener en cuenta
 - Las conclusiones que se han obtenido son limitadas a los graficos obtenidos (que se limitan a una lista de varios paises y medidas) es por esto que no se deben tomar como conclusiones que se puedan aplicar realmente (pues para ello necesitariamos hacer un estudio mucho mas preciso de todos los paises y de todas las medidas)
 - Tanto las muertes como las hospitalizaciones se muestran proporcionadas a la poblacion de cada pais, en cada grafico se muestra en la leyenda la proporcion utilizada (que ha variado entre los graficos para una mayor legibilidad)
@@ -128,8 +129,9 @@ Analisis de la curva de casos confirmados desde el inicio de la pandemia de vari
 ![Grafica de S03_casos_desde_inicio.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/S03_GraficoCasosInicio.svg?raw=true)
 
 
-## 8. Dificultades y optimizaciones
+## 9. Dificultades y optimizaciones
 Dificultades: Tratar con tantos datasets
 Optimizaciones: Cachear los rdd
 
-## 9. Logros y próximos objetivos
+## 10. Logros y próximos objetivos
+Aumentar el estudio a todos los pa
