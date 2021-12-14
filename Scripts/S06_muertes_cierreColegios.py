@@ -1,4 +1,6 @@
 import pandas as pd
+#import plotly.graph_objs as go
+#import plotly.express as px
 import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 
@@ -7,50 +9,47 @@ from pyspark.sql.functions import to_date, col, xxhash64, year,month,date_format
 from pyspark.sql import SparkSession
 from pyspark import SparkFiles
 
-'''
-Este script compara las muertes y hospitalizaciones por covid y el cierre de colegios para una lista de paises
-'''
+import sys
 
 paisesLista = ['ES', 'BR', 'FR', 'AR', 'CH']
 
 spark = SparkSession.builder.appName('A').getOrCreate()
 
-urlfile1="https://storage.googleapis.com/covid19-open-data/v3/oxford-government-response.csv"
-urlfile2= "https://storage.googleapis.com/covid19-open-data/v3/demographics.csv"
-urlfile3="https://storage.googleapis.com/covid19-open-data/v3/epidemiology.csv"
-urlfile4 = "https://storage.googleapis.com/covid19-open-data/v3/hospitalizations.csv"
+inputUri=None
+outputUri=None
+if len(sys.argv) == 2:
+    inputUri=sys.argv[1]
+elif len(sys.argv) == 3:
+    inputUri=sys.argv[1]
+    outputUri=sys.argv[2]
+else:
+  raise Exception("Exactly 1 argument is required: <inputUri> [<outputUri>]")
 
-spark.sparkContext.addFile(urlfile1)
-spark.sparkContext.addFile(urlfile2)
-spark.sparkContext.addFile(urlfile3)
-spark.sparkContext.addFile(urlfile4)
-
-df_spark_governmentResponse = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("oxford-government-response.csv"))\
-    .filter(col("location_key").isin(paisesLista)).filter(col("school_closing") != 0)
+df_spark_governmentResponse = spark.read.option('header','true').option('inferSchema','true').csv(f"{inputUri}/oxford-government-response.csv")\
+    .filter(col("location_key").isin(paisesLista)).filter(col("school_closing") != 0).cache()
+df_spark_epidemiology = spark.read.option('header','true').option('inferSchema','true').csv(f"{inputUri}/epidemiology.csv").cache()
+df_spark_hospitalizations = spark.read.option('header','true').option('inferSchema','true').csv(f"{inputUri}/hospitalizations.csv").cache()
+df_spark_demographics = spark.read.option('header','true').option('inferSchema','true').csv(f"{inputUri}/demographics.csv").cache()
 
 for x in paisesLista:
-    df_spark_governmentResponse_pais = df_spark_governmentResponse.filter(col("location_key") == x)
-    df_spark_epidemiology = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("epidemiology.csv")).filter(col("location_key") == x)
-    df_spark_demographics = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("demographics.csv")).filter(col("location_key") == x)
-    df_spark_hospitalizations = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("hospitalizations.csv")).filter(col("location_key") == x)
+    df_spark_governmentResponse_pais1 = df_spark_governmentResponse.filter(col("location_key") == x)
+    df_spark_epidemiology1 = df_spark_epidemiology.filter(col("location_key") == x)
+    df_spark_demographics1 = df_spark_demographics.filter(col("location_key") == x)
+    df_spark_hospitalizations1 = df_spark_hospitalizations.filter(col("location_key") == x)
     
-    poblacion = df_spark_demographics.first()["population"]
+    poblacion = df_spark_demographics1.first()["population"]
 
-    dfJOIN = df_spark_epidemiology.join(df_spark_governmentResponse_pais, 'date')
-    dfJOIN = dfJOIN.join(df_spark_hospitalizations, 'date').orderBy(col("date").asc())
-
-    df_spark_hospitalizations = spark.read.option('header','true').option('inferSchema','true').csv("file://"+SparkFiles.get("hospitalizations.csv")).filter(col("location_key") == x)
-    poblacion = df_spark_demographics.first()["population"]
+    dfJOIN = df_spark_epidemiology1.join(df_spark_governmentResponse_pais1, 'date')
+    dfJOIN = dfJOIN.join(df_spark_hospitalizations1, 'date').orderBy(col("date").asc())
 
     proporcion = 1000000 / poblacion
     percentage = 100 / 3
 
     dfJOIN = dfJOIN.withColumn("new_deceased", col("new_deceased") * proporcion).withColumnRenamed("new_deceased", "new_deceased/1000000")
     dfJOIN = dfJOIN.withColumn("school_closing", col("school_closing") * percentage).withColumnRenamed("school_closing", "school_closing_percentage")
-    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients/1000000")
+    dfJOIN = dfJOIN.withColumn("new_hospitalized_patients", col("new_hospitalized_patients") * proporcion).withColumnRenamed("new_hospitalized_patients", "new_hospitalized_patients/100000")
 
     dfJOIN.show()
     df_panda = dfJOIN.toPandas()
-    df_panda.plot(x ='date', y=["school_closing_percentage", "new_deceased/1000000", "new_hospitalized_patients/1000000" ], kind = 'line')
-    plt.legend(loc="upper center", bbox_to_anchor=(0.5, 1.15), ncol=3)
-    plt.show()
+    df_panda.plot(x ='date', y=["school_closing_percentage", "new_deceased/1000000", "new_hospitalized_patients/100000" ], kind = 'line')
+    plt.savefig("graficos/muertes_cierreEscuelas" + x + ".jpeg")
