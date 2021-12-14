@@ -4,9 +4,8 @@
   1. [El problema](#1-descripción-del-problema)
   2. [Necesidad de Big Data](#2-por-qué-necesitamos-big-data)
   3. [Solución y trabajo existente relacionado](#3-descripción-de-la-solución)
-     - [\[S1\] Mapa mundial de restricciones](#conclusiones-mapa_stringency_index_mundialpy)
-  4. [Descripción del modelo y los datos](#4-descripción-de-los-datos)
-  5. [Modelos de programación, plataformas e infraestructura](#5-descripcion-tecnica-del-modelo)
+  4. [Descripción de los datos](#4-descripción-de-los-datos)
+  5. [Descripción técnica del modelo](#5-descripcion-tecnica-del-modelo)
   6. [Explicación del código y como usarlo](#6-explicación-del-código-y-como-usarlo)
   7. [Evaluación del rendimiento](#7-evaluación-del-rendimiento)
   8. [Conclusiones](#8-conclusion)
@@ -51,11 +50,13 @@ Estas dos librerias de python nos han permitido transformar la información que 
 
 ### Google Cloud
 Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que tardaba con lo que nos tardaba de forma local. De esta manera, aunque no estuvieramos trabajando con un volumen de datos tan grande se podría ver la mejora de rendimiento que nos proporciona esta herramienta.
+
 ## Links
   - [Scripts](https://github.com/Tiberiuss/CLO/tree/main/Scripts)
   - [Graficos](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
   - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
-## 6. Explicaicon del codigo y como usarlo
+
+## 6. Explicación del codigo y como usarlo
 ### Requisitos necesarios para ejecutar el software
 Para ejecutar el software es necesario tener instalado python con las librerias de pandas y matplotlib, pyspark y un shell basado en unix.
 ### Como ejecutarlo (de manera local)
@@ -66,6 +67,13 @@ Se crea el cluster dataproc:
 gcloud dataproc clusters create cluster-8322 --enable-component-gateway --region europe-west6 --zone europe-west6-c --master-machine-type n1-standard-4 --master-boot-disk-type pd-ssd --master-boot-disk-size 50 --num-workers 2 --worker-machine-type n1-standard-4 --worker-boot-disk-type pd-ssd --worker-boot-disk-size 50 --image-version 2.0-debian10 --project genial-tangent-326912
 ```
 Se añaden los datasets y los scripts a un bucket para luego poder ejecutarlos desde el nodo maestro mediante spark-submit
+```
+BUCKET=gs://<BUCKET>
+```
+```
+spark-submit $BUCKET/script.py $BUCKET/Datasets
+```
+
 
 ## 7. Evaluación del rendimiento
 Hemos hecho varias pruebas en local y en el cloud con uno de los scripts que requiere mas procesado (muertes_cierre_Colegios.py):
