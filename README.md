@@ -9,7 +9,7 @@
   5. [Modelos de programación, plataformas e infraestructura](#5-descripcion-tecnica-del-modelo)
   6. [Explicación del código y como usarlo](#6-explicación-del-código-y-como-usarlo)
   7. [Evaluación del rendimiento](#7-evaluación-del-rendimiento)
-  8. [Conclusiones] (#8-conclusion)
+  8. [Conclusiones](#8-conclusion)
   9. [Dificultades y optimizaciones](#9-dificultades-y-optimizaciones)
   10. [Logros y próximos objetivos](#10-logros-y-próximos-objetivos)
 
