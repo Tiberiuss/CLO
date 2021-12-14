@@ -147,4 +147,4 @@ Dificultades: Tratar con una gran cantidad de Datasets, limitaciones de Google C
 Optimizaciones: Cachear los RDDs, seleccionar solo las columnas necesarias
 
 ## 10. Logros y próximos objetivos
-Aumentar el estudio a todos los países
+Aumentar el estudio de las medidas específicas a todos los países para obtener resultados mas precisos.
