@@ -31,10 +31,8 @@ Todos los datasets usados los hemos obtenido [aqui](https://github.com/GoogleClo
 - Demographics
 - Economy
 - Epidemiology
-- Emergency Declaration
 - Health
 - Hospitalizations
-- Mobility
 - Vaccinations
 - Government Response
 
