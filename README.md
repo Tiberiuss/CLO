@@ -61,6 +61,11 @@ Para ejecutar el software es necesario tener instalado python con las librerias 
 ### Como ejecutarlo (de manera local)
 En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que spark ejecute el script y una vez vaya finalizando cada trabajo se nos abrirá otra pestaña que mostrará el gráfico obtenido (este grafico se puede descargar y una vez se haya hecho habrá que cerrar esta pestaña para que siga ejecutando el script).
 ### Como ejecutarlo (en Google Cloud)
+Se crea el cluster dataproc:
+```
+gcloud dataproc clusters create cluster-8322 --enable-component-gateway --region europe-west6 --zone europe-west6-c --master-machine-type n1-standard-4 --master-boot-disk-type pd-ssd --master-boot-disk-size 50 --num-workers 2 --worker-machine-type n1-standard-4 --worker-boot-disk-type pd-ssd --worker-boot-disk-size 50 --image-version 2.0-debian10 --project genial-tangent-326912
+```
+Se añaden los datasets y los scripts a un bucket para luego poder ejecutarlos desde el nodo maestro mediante spark-submit
 
 ## 7. Evaluación del rendimiento
 Hemos hecho varias pruebas en local y en el cloud con uno de los scripts que requiere mas procesado (muertes_cierre_Colegios.py):
