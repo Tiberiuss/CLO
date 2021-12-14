@@ -1,6 +1,18 @@
 # CLO
 Proyecto de la asignatura de Cloud y Big Data
 
+## Herramientas necesarias
+```
+python3.9.7
+```
+Con los siguientes módulos
+```
+pip3
+matplotlib
+pyplot
+kaleido
+pyspark
+```
 [web](https://tiberiuss.github.io/CLO/)
 ## Scripts
 Carpeta en la que se encuentran los distintos scripts que se han realizado para obtener los graficos. Para usarlos se necesita tener pyspark (para realizar el trabajo sobre los datasets) y las librerias de panda y matplotlib (para realizar los graficos) y se ejecutaran mediante la orden '''spark-submit nombreDelScript.py'''
