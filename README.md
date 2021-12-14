@@ -131,7 +131,8 @@ Analisis de la curva de casos confirmados desde el inicio de la pandemia de vari
 
 ## 9. Dificultades y optimizaciones
 Dificultades: Tratar con tantos datasets
-Optimizaciones: Cachear los rdd
+
+Optimizaciones: Cachear los RD
 
 ## 10. Logros y próximos objetivos
 Aumentar el estudio a todos los pa
