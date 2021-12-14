@@ -39,7 +39,7 @@ deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age
 deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_5)","50-59")
 deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_6)","60-69")
 deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_7)","70-79")
-deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_8)","80-89")
+deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_8)","80-")
 deseases_by_age = deseases_by_age.withColumnRenamed("max(cumulative_deceased_age_9)","90-")
 
 
@@ -94,21 +94,17 @@ deseases_by_age = deseases_by_age.withColumn('70-79', when(deseases_by_age.locat
     .when(deseases_by_age.location_key.endswith(paisesLista[2]),col("70-79")*listaProporcion[2])\
     .when(deseases_by_age.location_key.endswith(paisesLista[3]),col("70-79")*listaProporcion[3]))
 
-deseases_by_age = deseases_by_age.withColumn('80-89', when(deseases_by_age.location_key.endswith(paisesLista[0]),col("80-89")*listaProporcion[0])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[1]),col("80-89")*listaProporcion[1])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[2]),col("80-89")*listaProporcion[2])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[3]),col("80-89")*listaProporcion[3]))
+deseases_by_age = deseases_by_age.withColumn('80-',when(deseases_by_age.location_key.endswith(paisesLista[0]),col("80-")*listaProporcion[0])\
+    .when(deseases_by_age.location_key.endswith(paisesLista[1]),(col("80-")+col("90-"))*listaProporcion[1])\
+    .when(deseases_by_age.location_key.endswith(paisesLista[2]),(col("80-")+col("90-"))*listaProporcion[2])\
+    .when(deseases_by_age.location_key.endswith(paisesLista[3]),(col("80-")+col("90-"))*listaProporcion[3]))
 
-deseases_by_age = deseases_by_age.withColumn('90-', when(deseases_by_age.location_key.endswith(paisesLista[0]),col("90-")*listaProporcion[0])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[1]),col("90-")*listaProporcion[1])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[2]),col("90-")*listaProporcion[2])\
-    .when(deseases_by_age.location_key.endswith(paisesLista[3]),col("90-")*listaProporcion[3]))
 
 deseases_by_age.show(vertical=True)
 
 df_final=deseases_by_age.toPandas()
 df_final.plot.bar(x ='location_key', y=['1-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70-79'
-, '80-89', '90-'])
+, '80-'])
 
 plt.ylabel('deaths/million inhabitants')
 plt.legend(loc="upper center", bbox_to_anchor=(0.5, 1.15), ncol=5)
