@@ -41,7 +41,7 @@ Todos los datasets usados los hemos obtenido [aqui](https://github.com/GoogleClo
 En la siguiente imagen vemos un ejemplo de Government Response (medidas tomadas por el gobierno):
 
 ![Ejemplo de columnas de Government Response (Medidas tomadas)](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/EjemploDS.JPG?token=AU4GPUPZ4C7NANPW6QGHFE3BX5V7G)
-## Descripción técnica del modelo
+## 5. Descripción técnica del modelo
 ### Pyspark
 En cuanto a sofware nuestra principal herramienta ha sido pyspark, con este hemos podido transformar los datasets mencionados anteriormente (en formato csv) en informacion útil para llegar a una solución al problema planteado (usando principalmente la funcion de filtrado y de union de diferentes datasets). 
 
@@ -54,14 +54,14 @@ Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que
   - [Scripts](https://github.com/Tiberiuss/CLO/tree/main/Scripts)
   - [Graficos](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
   - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
-## Descripción técnica del software usado (como ejecutarlo)
+## 6. Descripción técnica del software usado (como ejecutarlo)
 ### Requisitos necesarios para ejecutar el software
 Para ejecutar el software es necesario tener instalado python con las librerias de pandas y matplotlib, pyspark y un shell basado en unix.
 ### Como ejecutarlo (de manera local)
 En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que spark ejecute el script y una vez vaya finalizando cada trabajo se nos abrirá otra pestaña que mostrará el gráfico obtenido (este grafico se puede descargar y una vez se haya hecho habrá que cerrar esta pestaña para que siga ejecutando el script).
 ### Como ejecutarlo (en Google Cloud)
 
-## 6. Evaluación del rendimiento
+## 7. Evaluación del rendimiento
 Hemos hecho varias pruebas en local y en el cloud con uno de los scripts que requiere mas procesado (muertes_cierre_Colegios.py):
 
 ![Comparacion rendimiento](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/rendimiento.png)
