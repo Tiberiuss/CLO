@@ -106,9 +106,14 @@ En los paises que hemos estudiado parece que cuando se sube la exigencia de la c
 ![Ejemplo de muertes_cuarentena.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaES.png?raw=true)
 
 ### Conclusiones muertesPorSexo.py
-Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1000000 habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
+Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1.000.000 habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
 
-![Ejemplo de muertesPorSexo.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/GraficoMuertesPorSexo.png?raw=true)
+![Ejemplo de muertesPorSexo.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesPorSexo.png)
+
+### Conclusiones muertesPorEdad.py
+Los datos obtenidos de los países estudiados muestran que la gran mayoría de los decesos se han producido en las personas de edad más avanzada, siendo la franja de edad de más riesgo la de los mayores de 70 años (donde se concentra el mayor número de muertes), seguida de la de entre los de 60 y 69 años. En la siguiente imagen se muestra el diagrama de barras que representa el número de defunciones por rango de edad por cada 1.000.000 habitantes en cada uno de los países seleccionados para el análisis:
+
+![Ejemplo de muertesPorEdad.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesPorEdad.png)
 
 
 ### Conclusiones mapa_stringency_index_mundial.py
