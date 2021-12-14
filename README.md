@@ -96,7 +96,7 @@ Los datos obtenidos de los países estudiados muestran que la letalidad del coro
 ![Ejemplo de muertesPorSexo.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesPorSexo.png)
 
 ### Conclusiones muertesPorEdad.py
-Los datos obtenidos de los países estudiados muestran que la gran mayoría de los decesos se han producido en las personas de edad más avanzada, siendo la franja de edad de más riesgo la de los mayores de 70 años (donde se concentra el mayor número de muertes), seguida de la de entre los de 60 y 69 años. En la siguiente imagen se muestra el diagrama de barras que representa el número de defunciones por rango de edad por cada 1.000.000 habitantes en cada uno de los países seleccionados para el análisis:
+Los datos obtenidos de los países estudiados muestran que la gran mayoría de los fallecimientos se han producido en las personas de edad más avanzada, siendo la franja de edad de más riesgo la de los mayores de 80 años (donde se concentra el mayor número de muertes), seguida de la de entre los de 70 y 79 años. En la siguiente imagen se muestra el diagrama de barras que representa el número de defunciones por rango de edad por cada 1.000.000 habitantes en cada uno de los países seleccionados para el análisis:
 
 ![Ejemplo de muertesPorEdad.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesPorEdad.png)
 
