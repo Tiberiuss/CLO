@@ -94,6 +94,6 @@ En los paises que hemos estudiado parece que cuando se sube la exigencia de la c
 ![Ejemplo de muertes_cuarentena.py en ES](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesCuarentenaES.png?token=AU4GPUOUT7YWPRCY63UC5ZLBYDFZW)
 
 ### Conclusiones muertesPorSexo.py
-Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1000000 de habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
+Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1000000 habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
 
 ![Ejemplo de muertesPorSexo.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/GraficoMuertesPorSexo.png)
