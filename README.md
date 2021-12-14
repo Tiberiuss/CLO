@@ -90,11 +90,6 @@ En el grafico se puede ver como de los países seleccionados, los que tienen may
 
 ![Ejemplo de economia.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoEconomiapng.png?raw=true)
 
-### Conclusiones muertes_Restricciones.py
-Este es un grafico general en el que se puede apreciar como el aumento en la exigencia de medidas sanitarias reduce los fallecidos y las hospitalizaciones. Sabiendo que las medidas sanitarias son algo necesario para la pandemia hemos analizado algunas medidas especificas para ver si estas son necesarias o no. En la siguiente imagen se muestra el grafico de restricciones en una lista de paises:
-
-![Ejemplo de muertes_Restricciones.py en CH](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesRestriccionesCH.png?raw=true)
-
 ### Conclusiones muertesPorSexo.py
 Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1.000.000 habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
 
@@ -104,6 +99,11 @@ Los datos obtenidos de los países estudiados muestran que la letalidad del coro
 Los datos obtenidos de los países estudiados muestran que la gran mayoría de los decesos se han producido en las personas de edad más avanzada, siendo la franja de edad de más riesgo la de los mayores de 70 años (donde se concentra el mayor número de muertes), seguida de la de entre los de 60 y 69 años. En la siguiente imagen se muestra el diagrama de barras que representa el número de defunciones por rango de edad por cada 1.000.000 habitantes en cada uno de los países seleccionados para el análisis:
 
 ![Ejemplo de muertesPorEdad.py](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesPorEdad.png)
+
+### Conclusiones muertes_Restricciones.py
+Este es un grafico general en el que se puede apreciar como el aumento en la exigencia de medidas sanitarias reduce los fallecidos y las hospitalizaciones. Sabiendo que las medidas sanitarias son algo necesario para la pandemia hemos analizado algunas medidas especificas para ver si estas son necesarias o no. En la siguiente imagen se muestra el grafico de restricciones en una lista de paises:
+
+![Ejemplo de muertes_Restricciones.py en CH](https://raw.githubusercontent.com/Tiberiuss/CLO/main/Graficos/GraficoMuertesRestriccionesCH.png?raw=true)
 
 ### Conclusiones muertes_cierreColegios.py
 En los paises que hemos estudiado siempre que se hace menos estricta la medida del cierre de colegios hay un pico de hospitalizaciones y muertes en las siguientes fechas, es por esto que podemos concluir que la medida del cierre de colegios en importante para el control de la pandemia. En la siguiente imagen vemos un ejemplo de estos gráficos en Argentina:
