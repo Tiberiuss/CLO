@@ -6,7 +6,7 @@
   3. [Solución y trabajo existente relacionado](#3-descripción-de-la-solución)
      - [\[S1\] Mapa mundial de restricciones](#conclusiones-mapa_stringency_index_mundialpy)
   4. [Descripción del modelo y los datos](#4-descripción-de-los-datos)
-  5. [Modelos de programación, plataformas e infraestructura](#5-modelos-de-programacion-plataformas-e-infraestructura)
+  5. [Modelos de programación, plataformas e infraestructura](#5-descripcion-tecnica-del-modelo)
   6. [Explicación del código y como usarlo](#6-explicación-del-código-y-como-usarlo)
   7. [Evaluación del rendimiento](#7-evaluación-del-rendimiento)
   8. [Dificultades y optimizaciones](#8-dificultades-y-optimizaciones)
@@ -54,7 +54,7 @@ Hemos usado GoogleCloud para ejecutar los scripts y poder comparar el tiempo que
   - [Scripts](https://github.com/Tiberiuss/CLO/tree/main/Scripts)
   - [Graficos](https://github.com/Tiberiuss/CLO/tree/main/Graficos)
   - [Dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data)
-## 6. Descripción técnica del software usado (como ejecutarlo)
+## 6. Explicaicon del codigo y como usarlo
 ### Requisitos necesarios para ejecutar el software
 Para ejecutar el software es necesario tener instalado python con las librerias de pandas y matplotlib, pyspark y un shell basado en unix.
 ### Como ejecutarlo (de manera local)
