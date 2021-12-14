@@ -97,3 +97,16 @@ En los paises que hemos estudiado parece que cuando se sube la exigencia de la c
 Los datos obtenidos de los países estudiados muestran que la letalidad del coronavirus parece ser mayor entre los hombres que entre las mujeres por cada 1000000 habitantes. En la siguiente imagen se muestra el diagrama de barras que contrasta el número de defunciones de mujeres frente al número de defunciones de hombres en cada uno de los países seleccionados para el análisis:
 
 ![Ejemplo de muertesPorSexo.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/GraficoMuertesPorSexo.png)
+
+
+### Conclusiones mapa_stringency_index.py
+Este mapa ilustra las restricciones de todos los paises con los ultimos datos sobre sus restricciones.
+![Grafica de S01_mapa_stringency_index.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/S01_GraficoMapa.svg?raw=true)
+
+### Conclusiones mapa_stringency_index.py
+Comparación entre todos los países respecto a los casos confirmados en los ultimos 7 días.
+![Grafica de S02_suma_casos.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/S02_GraficoSumaCasos.svg?raw=true)
+
+### Conclusiones casos_desde_inicio.py
+Analisis de la curva de casos confirmados desde el inicio de la pandemia de varios paises.
+![Grafica de S03_casos_desde_inicio.py](https://github.com/Tiberiuss/CLO/blob/main/Graficos/S03_GraficoCasosInicio.svg?raw=true)
