@@ -73,6 +73,7 @@ En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que s
 
 ## 6. Evaluación del rendimiento
 Hemos hecho varias pruebas en local y en el cloud con uno de los scripts que requiere mas procesado (muertes_cierre_Colegios.py):
+
 ![Comparacion rendimiento](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/rendimiento.png)
 ## Conclusión
 ### Datos importantes a tener en cuenta
