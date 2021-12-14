@@ -143,9 +143,9 @@ Analisis de la curva de casos confirmados desde el inicio de la pandemia de vari
 
 
 ## 9. Dificultades y optimizaciones
-Dificultades: Tratar con una gran cantidad de Datasets
-
-Optimizaciones: Cachear los RDD
+Dificultades: Tratar con una gran cantidad de Datasets, limitaciones de Google Cloud
+![Comparacion rendimiento](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/rendimiento.png)
+Optimizaciones: Cachear los RDDs, seleccionar solo las columnas necesarias
 
 ## 10. Logros y próximos objetivos
 Aumentar el estudio a todos los países
