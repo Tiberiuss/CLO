@@ -72,7 +72,7 @@ En la consola se escribirá "spark-submit nombreDelFichero.py", esto hará que s
 ### Como ejecutarlo (en Google Cloud)
 
 ## 6. Evaluación del rendimiento
-
+![Comparacion rendimiento](https://raw.githubusercontent.com/Tiberiuss/CLO/main/webImages/rendimiento.png)
 ## Conclusión
 ### Datos importantes a tener en cuenta
 - Las conclusiones que se han obtenido son limitadas a los graficos obtenidos (que se limitan a una lista de varios paises y medidas) es por esto que no se deben tomar como conclusiones que se puedan aplicar realmente (pues para ello necesitariamos hacer un estudio mucho mas preciso de todos los paises y de todas las medidas)
